@@ -1,7 +1,18 @@
 
-export type Rect = {x: number, y: number, width: number, height: number};
-export type Score = {anger: number, contempt: number, disgust: number,
-    fear: number, happiness: number, neutral: number, sadness: number, surpise: number};
+export type Rect = { x: number, y: number, width: number, height: number };
+
+export type Score = {
+    anger: number,
+    contempt: number,
+    disgust: number,
+    fear: number,
+    happiness: number,
+    neutral: number,
+    sadness: number,
+    surpise: number
+    [index: string]: number;
+};
+
 export default class FaceData {
     rect: Rect = {
         x: 0,
@@ -9,6 +20,7 @@ export default class FaceData {
         width: 0,
         height: 0,
     };
+
     score: Score = {
         anger: 0,
         contempt: 0,
@@ -19,6 +31,9 @@ export default class FaceData {
         sadness: 0,
         surpise: 0,
     };
+
+    path = "";
+    faceImage: any = null;
 
     constructor() {
     }
