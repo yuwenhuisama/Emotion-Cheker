@@ -1,4 +1,4 @@
-# Emotion-Cheker
+# Emotion-Cheker (Smile++)
 ## Intoduce
 
 An emotion-check application developed by Microsoft Emotion Recognition Apis and React Native.
@@ -11,19 +11,23 @@ This application can check out faces in a photo then guess people's emotion (hap
 2. ```npm install```
 3. ```react-native run-ios``` or ```react-native run-andriod```
 
-> Note: You need to install enssential **Developing Environment** such as `XCode`/`Andriod Studio` to compile and run this project.
+> Note: You need to first install enssential **Developing Environment** such as `XCode`/`Andriod Studio` to compile and run this project.
 
 ## Api & Tech Used
 
-**Microsoft Emotion Recognition Api:** https://azure.microsoft.com/en-us/services/cognitive-services/emotion/
+**Microsoft Azure & Microsoft Emotion Recognition Api**: https://azure.microsoft.com/en-us/services/cognitive-services/emotion/
 
-**React Native**: http://reactnative.cn/
-
-**react-native-svg**:  https://github.com/react-native-community/react-native-svg
+**React Native**: https://facebook.github.io/react-native/
 
 **react-native-image-picker**: https://github.com/react-community/react-native-image-picker
 
-**teaset** : https://github.com/rilyu/teaset
+**teaset**: https://github.com/rilyu/teaset
+
+**rn-splash-screen**: https://github.com/mehcode/rn-splash-screen
+
+**react-native-fetch-blob**: https://github.com/wkh237/react-native-fetch-blob/
+
+**lodash**: https://lodash.com/
 
 **Typescript**: http://www.typescriptlang.org/
 

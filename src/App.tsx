@@ -33,6 +33,8 @@ import { Button, Toast, Theme } from "teaset";
 import RNFetchBlob from "react-native-fetch-blob";
 import FaceData, { Score } from "./FaceData";
 
+import SplashScreen from "rn-splash-screen";
+
 interface IArray {
   [index: string]: any[];
 }
@@ -105,6 +107,12 @@ export default class App extends Component<Props, States> {
     super(props, context);
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 2000);
+  }
+
   onSelectButtonClicked() {
     this.setState({
       ...this.state,
@@ -116,12 +124,15 @@ export default class App extends Component<Props, States> {
       takePhotoButtonTitle: "拍照",
       chooseFromLibraryButtonTitle: "从相册中选择",
       cameraType: "front",
+      maxWidth: 800,
+      maxHeight: 600,
     }, async (response) => {
       if (response.error) {
         console.log(response.error);
       }
       else if (!response.didCancel && !response.customButton) {
         // dispatch(ACT_SELECT_PHOTO({ uri: "data:image/jpeg;base64," + response.data }));
+        console.log(response);
         this.setState({
           ...this.state,
           imagePath: response.uri,
